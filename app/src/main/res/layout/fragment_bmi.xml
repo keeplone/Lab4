@@ -1,16 +1,73 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.keeplone.lab4_2.BmiFragment"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:text="ส่วนสูง"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BMI"
-        android:textSize="20sp"/>
+        android:id="@+id/textView3"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginTop="86dp"
+        android:layout_alignParentStart="true"/>
 
-</LinearLayout>
+    <TextView
+        android:text="นำ้หนัก"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/weight"
+        android:inputType="numberDecimal"
+        android:layout_marginStart="43dp"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/height"
+        android:inputType="numberDecimal"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignStart="@+id/weight" />
+
+    <Button
+        android:text="Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:id="@+id/btnCal" />
+
+    <TextView
+        android:text="BmiCalculate"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="normal|bold" />
+
+</RelativeLayout>
